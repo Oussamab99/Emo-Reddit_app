@@ -1,0 +1,141 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    background-color: #FFDE59;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 20px;
+  }
+  
+  /* Logo */
+  nav img {
+    height: 50px;
+  }
+  
+  /* Links */
+  nav a {
+    color: #fff;
+    text-decoration: none; 
+    margin: 0px 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Link hover */
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    color: #0f0f0f;
+    margin: 0;
+    text-align: center;
+    font-style: bold;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+
+  .form button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(255, 69, 0);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .posts {
+    margin-top: 20px;
+  }
+  
+  .post {
+    margin-bottom: 20px;
+  }
+  
+  .post h2 {
+    color: #333;
+  }
+  
+  .post p {
+    color: #666;
+  }
+  
+  .post a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .post a:hover {
+    text-decoration: underline;
+    text-decoration: line-through;
+  }
+  
+  .comments {
+    margin-top: 20px;
+  }
+  
+  .comments h1 {
+    color: #333;
+  }
+  
+  .comments h3 {
+    color: #333;
+  }
+  
+  .comments p {
+    color: #666;
+  }
+  
+  hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  

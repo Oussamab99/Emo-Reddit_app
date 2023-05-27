@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts for {{ username }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='posts_style.css', _external=False) }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </nav>
+    <div class="container">
+        <h1>Welcome {{ username }} 😄 </h1>
+        {% for post in posts %}
+            <div>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text }}</p>
+                <a href="{{ url_for('comments', post_id=post['post_id'], username=username) }}">View Comments</a>
+            </div>
+        {% endfor %}
+        
+        <form action="post">
+            <a href="/">Return to Search</a>
+        </form>
+    </div>
+</body>
+</html>

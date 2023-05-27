@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comments for {{ post_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='comments_style.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </nav>
+    <div class="container"">
+        <h1>Comments for the Post</h1>
+        <form action="/Analyse" method="post">
+            <button type="submit">Analyse Comments</button>
+        </form>
+        {% for comment in comments %}
+            <div>
+                <h3>Author: {{ comment.author }}</h3>
+                <p>{{ comment.body }}</p>
+            </div>
+        {% endfor %}
+
+        <form action="{{ url_for('posts') }}" method="post">
+            <input type="hidden" name="username" value="{{ request.args.get('username') }}">
+            <button type="submit">Return to Posts</button>
+        </form>
+    </div>
+</body>
+</html>

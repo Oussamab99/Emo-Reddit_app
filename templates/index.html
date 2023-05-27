@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reddit Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <script src = "{{ url_for('static', filename='Validate.js') }}"></script>
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    </nav>
+
+    <div class="container">
+        <form action="/posts" method="post" class="form" onsubmit="return validateForm()">
+            <h1 class="heading">Hi👋, Enter Your Reddit Username</h1>
+            <input type="text" name="username" id="username" placeholder="Username">
+            <span id="usernameError" style="color: red; display: none;">Please enter a valid username</span>
+            <button type="submit">Get Posts and Comments</button>
+        </form>
+    </div>
+</body>
+</html>
